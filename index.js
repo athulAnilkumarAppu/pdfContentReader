@@ -19,6 +19,9 @@ app.use(express.urlencoded({extended: false, parameterLimit: '50000'}))
 // db.on('error', console.log('connection error'))
 // db.once('open', console.log('db connected'))
 
+
+
+
 app.use('/', indexRouter)
 
 app.listen(port, ()=> {
