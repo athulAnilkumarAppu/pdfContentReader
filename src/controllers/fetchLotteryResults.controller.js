@@ -22,10 +22,10 @@ const fetchSingleLotteryByIdApi = async (req, res)=> {
   const id = req?.body.id
   try {
   
-      const snapshot = await admin.database().ref('/lotteryResultsData').once('value');
+      const snapshot = await admin.database().ref('/fullResults').once('value');
   const data = snapshot.val();
 
-  const lotteryResult = data.lotteries
+  const lotteryResult = data.fullResult
 
   const filteredResultById = lotteryResult?.filter((item)=> item?.id === id)
 
