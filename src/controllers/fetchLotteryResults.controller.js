@@ -7,7 +7,7 @@ const fetchLotteryResultsApi = async (req, res)=> {
     try {
     
         const snapshot = await admin.database().ref('/lotteryResultsData').once('value');
-    const data = snapshot.val();
+        const data = snapshot.val();
   
 
         res.json({status: 200, lotteryResults: data, pdfLink: data.pdfUrl})
